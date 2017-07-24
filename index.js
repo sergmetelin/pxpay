@@ -61,7 +61,7 @@ module.exports = {
         var dpsData = this.generateRequest(details);
         var self = this;
         rquest({
-            uri: url,
+            uri: details.url || url,
             method: 'POST',
             body: dpsData
         }, function requestCallback (err, res, body) {
